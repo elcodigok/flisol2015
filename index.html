@@ -123,10 +123,62 @@
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
+					<section>
+					    <h1>Top 10 de OWASP</h1>
+					</section>
+					
+					<section>
+						<h2>A5 Security Misconfiguration</h2>
+						<p>Corresponde a configuraciones no adecuadas que pueden impactar en la seguridad de la propia aplicación.</p>
+						<ul>
+						    <li class="fragment">Cuentas predeterminadas</li>
+						    <li class="fragment">Archivos o directorios no protegidos</li>
+						</ul>
+					</section>
+					<section>
+						<h2>A4 Insecure Direct Object References</h2>
+						<p>Puede derivar en un acceso no autorizado a información crítica debido a errores en el diseño o desarrollo.</p>
+						<pre class="fragment"><code data-trim contenteditable>
+						http://example.com/app/accountInfo?acct=miUser
+						</code></pre>
+
+						<pre class="fragment"><code data-trim contenteditable>
+						    http://example.com/app/accountInfo?acct=otroUser
+						</code></pre>
+
+					</section>
+					<section>
+						<h2>A3 Cross-Site Scripting (XSS)</h2>
+						<p>Ocurre cuando existe validación pobre de la información ingresada por el atacante.</p>
+						<ul>
+						    <li>phishing</li>
+						    <li>robo de credenciales</li>
+						    <li>ejecucion de acciones automaticas</li>
+						</ul>
+
+						<pre class="fragment"><code data-trim contenteditable>
+						 javascript:while(1)alert("Este mensaje saldra indefinidamente");
+						</code></pre>
+					</section>
+					<section>
+						<h2>A2 Broken Authentication and Session Management</h2>
+						<p>Corresponde al mal manejo de las sesiones en aquellas aplicaciones que utilizan autenticación.</p>
+						<ul>
+							<li>No se establece tiempos de desconexion en la aplicacion</li>
+							<li>Identificadores de seseion en urls</li>
+						</ul>
+						<pre class="fragment"><code data-trim contenteditable>
+						 	http://example.com/sale/saleitems;jsessionid=2P0OC2JDPXM0OQSNDLPSKHCJUN2JV?dest=Hawaii
+					     </code></pre>
+					</section>
+					<section>
+						<h2>A1 Injection</h2>
+						<p>Corresponde a las inyección de código, siendo las inyecciones SQL una de las más comunes.</p>
+						<ul>
+							<li>SQLi</li>
+							<li>LDAPi (inyecciones en protocolo ligero de accedo a directorios</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
